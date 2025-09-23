@@ -71,3 +71,34 @@ function loadServices() {
 
 // Initialize loading service data
 loadServices();
+
+// Handle booking form submission (triggered only in booking.html)
+if (document.getElementById('booking-form')) {
+  document.getElementById('booking-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const date = document.getElementById('date').value;
+    const service_id = document.getElementById('service_id').value;
+
+    fetch('/api/bookings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, phone, date, service_id })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success || data.message === 'Booking successful') {
+          alert('Booking successful!');
+          document.getElementById('booking-form').reset();
+        } else {
+          alert('Booking failed: ' + (data.error || 'Unknown error'));
+        }
+      })
+      .catch(err => {
+        console.error('Booking request failed:', err);
+        alert('Booking request failed: ' + err.message);
+      });
+  });
+}
