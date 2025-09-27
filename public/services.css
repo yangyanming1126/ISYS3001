@@ -1,0 +1,19 @@
+#services {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#services h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#services h3 {
+  margin-top: 40px;
+  font-size: 1.6em;
+  color: #007B5E;
+}
+
+#services h4 {
+  margin-bottom: 5px;
+}
