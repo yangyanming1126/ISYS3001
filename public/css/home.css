@@ -1,6 +1,6 @@
-/* === Top banner === */
+/* === Top Banner === */
 .top-banner {
-  background: url('images/banner1.png') no-repeat center center/cover;
+  background: url('../images/banner1.png') no-repeat center center/cover;
   color: white;
   text-align: center;
   padding: 80px 20px;
@@ -16,14 +16,19 @@
   font-weight: 300;
 }
 
-/* === Introduction section === */
+/* === Intro Section === */
 .intro-section {
   text-align: center;
   padding: 40px 20px;
   background: #fff3e0;
 }
 
-/* === Gallery === */
+.intro-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* === Image Gallery === */
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -39,11 +44,16 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* === Featured services preview === */
+/* === Featured Services === */
 .featured-services {
   text-align: center;
   padding: 40px 20px;
   background: #f5f5f5;
+}
+
+.featured-services h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
 }
 
 .service-card {
@@ -55,23 +65,6 @@
   width: 90%;
   max-width: 500px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-/* === CTA button === */
-.cta-button {
-  background-color: #007B5E;
-  color: white;
-  padding: 12px 24px;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #005f48;
 }
 
 /* === About Us Block === */
